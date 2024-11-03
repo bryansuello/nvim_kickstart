@@ -1,3 +1,5 @@
+--https://www.youtube.com/watch?v=m8C0Cq9Uv9o&t=179s&ab_channel=TJDeVries
+--https://github.com/dam9000/kickstart-modular.nvim/tree/master
 --[[
 
 =====================================================================
