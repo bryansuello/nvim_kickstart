@@ -10,6 +10,10 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 -- for conciseness
 local opts = { noremap = true, silent = true }
 
+-- remove highlight
+-- vim.api.nvim_set_keymap("n", "<leader>nh", ":nohlsearch<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", opts)
+
 -- save file with ctrl + s
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>", opts)
 
