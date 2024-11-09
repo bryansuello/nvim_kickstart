@@ -75,6 +75,21 @@ return { -- Autocompletion
 			},
 			completion = { completeopt = "menu,menuone,noinsert" },
 
+			enabled = function()
+				-- Disable autocompletion in Markdown files
+				local context = require("cmp.config.context")
+				if vim.bo.filetype == "markdown" then
+					return false
+				else
+					return true
+				end
+			end,
+			snippet = {
+				expand = function(args)
+					luasnip.lsp_expand(args.body)
+				end,
+			},
+
 			-- For an understanding of why these mappings were
 			-- chosen, you will need to read `:help ins-completion`
 			--
